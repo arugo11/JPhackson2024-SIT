@@ -1,1 +1,3 @@
-# JPhackson2024-SIT
+# jphackson2024-sit
+
+Describe your project here.
