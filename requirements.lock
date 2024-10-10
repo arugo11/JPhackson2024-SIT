@@ -12,9 +12,19 @@
 -e file:.
 blinker==1.8.2
     # via flask
+bson==0.5.10
+    # via jphackson2024-sit
 click==8.1.7
     # via flask
+dnspython==2.7.0
+    # via pymongo
 flask==3.0.3
+    # via flask-login
+    # via flask-pymongo
+    # via jphackson2024-sit
+flask-login==0.6.3
+    # via jphackson2024-sit
+flask-pymongo==2.3.0
     # via jphackson2024-sit
 itsdangerous==2.2.0
     # via flask
@@ -23,5 +33,13 @@ jinja2==3.1.4
 markupsafe==3.0.1
     # via jinja2
     # via werkzeug
+pymongo==4.10.1
+    # via flask-pymongo
+python-dateutil==2.9.0.post0
+    # via bson
+six==1.16.0
+    # via bson
+    # via python-dateutil
 werkzeug==3.0.4
     # via flask
+    # via flask-login

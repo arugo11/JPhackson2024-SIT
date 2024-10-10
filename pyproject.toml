@@ -7,6 +7,9 @@ authors = [
 ]
 dependencies = [
     "flask>=3.0.3",
+    "flask-login>=0.6.3",
+    "bson>=0.5.10",
+    "flask-pymongo>=2.3.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
