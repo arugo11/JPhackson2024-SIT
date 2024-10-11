@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo svg {
+    margin-right: 10px;
+}
+
+.controls button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+aside {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+
+#graph-container {
+    flex-grow: 1;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+#text-form {
+    display: flex;
+    width: 100%;
+}
+
+#text-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    margin-left: 10px;
+}
+
+#generate-button, #upload-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.switch.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Additional styles for sidebar inputs */
+aside input[type="number"] {
+    width: 50px;
+    margin-left: 5px;
+}
+
+aside label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+aside h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}

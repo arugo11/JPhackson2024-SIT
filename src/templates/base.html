@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Gen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+        <!--ヘッダーの表示-->
+<body>
+    <header>
+        <div class="logo">
+            3D-Gen
+        </div>
+        <div class="controls">
+            <button class="switch" id="switch-2d">2D</button>
+            <button class="switch active" id="switch-3d">3D</button>
+            <button class="help" id="help-button">?</button>
+            <button class="export" id="export-button">↑</button>
+        </div>
+    </header>
+
+    <main>
+        <!--サイドバーの表示-->
+        <aside>
+            <section>
+                <h3>ノード</h3>
+                <label>文字 <input type="number" id="node-font-size" value="10" min="1"> px</label>
+                <input type="range" id="node-font-size-range" min="1" max="100" value="10">
+                <label>ボックス <input type="number" id="node-box-size" value="20" min="1"> px</label>
+                <input type="range" id="node-box-size-range" min="1" max="100" value="20">
+            </section>
+            <section>
+                <h3>エッジ</h3>
+                <label>ラベル <input type="number" id="edge-label-size" value="10" min="1"> px</label>
+                <input type="range" id="edge-label-size-range" min="1" max="100" value="10">
+                <label>矢印 <input type="number" id="edge-arrow-size" value="20" min="1"> px</label>
+                <input type="range" id="edge-arrow-size-range" min="1" max="100" value="20">
+            </section>
+        </aside>
+        <div id="graph-container"></div>
+    </main>
+
+    <footer>
+        <form action="/" method="POST">
+            <input type="text" id="text-input" name="text" placeholder="テキストを入力">
+            <button type="submit" id="generate-button">▶</button>
+            <button type="button" id="upload-button">↑</button>
+        </form>
+    </footer>
+
+</body>
+</html>
