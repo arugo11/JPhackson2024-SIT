@@ -8,3 +8,6 @@ wheels/
 
 # venv
 .venv
+
+# Flask‚ÌDebug‚ğİ’è
+.config
