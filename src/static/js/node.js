@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 export class Node {
-  constructor(scene, camera, imageUrl = '', text = '', size = 1) {
+  constructor(scene, camera, imageUrl, text = '', size = 1) {
     this.scene = scene;
     this.camera = camera;
     this.size = size;
@@ -16,6 +16,7 @@ export class Node {
 
     // シーンに正方形を追加
     this.scene.add(this.plane);
+
   }
 
   // カメラに対して常に平行に保つ
@@ -31,5 +32,15 @@ export class Node {
   // 正方形のサイズを設定
   setSize(newSize) {
     this.plane.scale.set(newSize, newSize, 1);
+    const textHeight = 0.5;  // テキストの高さを適切に設定
+    if (this.textSprite) {
+      this.textSprite.position.set(0, -newSize / 2 - textHeight / 2, 0); // テキストの位置も更新
+    }
+  }
+
+  // 現在の位置を返す
+  getPosition() {
+    return this.plane.position;
   }
 }
+
