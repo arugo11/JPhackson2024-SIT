@@ -9,5 +9,11 @@ wheels/
 # venv
 .venv
 
-# Flask��Debug��ݒ�
+# Flask��Debug��ݒ�
 .config
+
+# 環境変数
+.env
+
+# 入力テスト
+test.py

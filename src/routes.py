@@ -1,5 +1,7 @@
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify, make_response
+from .utils import generate_json_from_text
 import logging
+from json import dumps
 
 routes = Blueprint('routes', __name__)
 
@@ -10,7 +12,10 @@ def generate():
         logging.debug(f"Received text: {text}")
 
         try:
-            return jsonify({'result': f"{text}"})
+            result = generate_json_from_text(text)
+            response = make_response(dumps(result,ensure_ascii=False))
+            response.headers['Content-Type'] = 'application/json; charset=utf-8'
+            return response
         except Exception as e:
             logging.error(f"Error processing data: {str(e)}")
             return jsonify({'error': str(e)}), 500
