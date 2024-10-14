@@ -1,19 +1,18 @@
 ##
 # @file         __init__.py
+# @ver          0.1.0
 # @author       arugo11
-# @brief        Flaskèµ·å‹•ã¨loggerã®ã‚³ãƒ³ãƒ•ã‚£ã‚°è¨­å®š
+# @brief        FlaskƒAƒvƒŠ‚Ì‹N“®
 
 from flask import Flask
 from .routes import routes
-import json
-from logging import getLogger, config
-
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object('src.config')
+    
     app.register_blueprint(routes)
+    
     return app
-
 
 app = create_app()
