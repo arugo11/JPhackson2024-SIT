@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, jsonify, make_response
 from .utils import generate_json_from_text
 import logging
 from json import dumps
+from logging import getLogger
 
 routes = Blueprint('routes', __name__)
 
